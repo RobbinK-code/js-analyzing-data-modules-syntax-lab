@@ -1,11 +1,12 @@
 request('datejs');
+
 function combineUsers(...args) {
   const combinedObject = {
     users: []
   }
 }
 
-args.forEach(arg => {
+args.forEach(arr => {
   combinedObject.users.push(...arr);
 })
 
