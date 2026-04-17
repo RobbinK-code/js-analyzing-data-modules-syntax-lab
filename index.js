@@ -1,4 +1,4 @@
-request('datejs');
+require('datejs');
 
 function combineUsers(...args) {
   const combinedObject = {
