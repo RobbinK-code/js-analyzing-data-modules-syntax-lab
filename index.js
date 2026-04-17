@@ -13,6 +13,4 @@ args.forEach(arr => {
 combinedObject.merge_date = new Date().toString('M/d/yyyy');
 return combinedObject;
 
-module.exports = {
-  ...(typeof combineUsers !== 'undefined' && { combineUsers })
-};
+module.exports = combineUsers;
