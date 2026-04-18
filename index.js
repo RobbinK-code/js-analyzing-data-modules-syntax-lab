@@ -9,7 +9,7 @@ function combineUsers(...args) {
     combinedObject.users.push(...array);
   });
 
-  combinedObject.merge_date = Date.today().toString('yyyy/M/d');
+  combinedObject.merge_date = Date.today().toString("M/d/yyyy");
 
   return combinedObject;
 }
