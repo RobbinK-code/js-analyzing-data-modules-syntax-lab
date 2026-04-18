@@ -1,17 +1,25 @@
-require('datejs');
+//adding dates
+require("datejs");
 
+//combining users
 function combineUsers(...args) {
-  const combinedObject = {
+  let combinedObject = {
     users: []
   };
 
-  args.forEach(array => {
-    combinedObject.users.push(...array);
+//creating the loop for the above functions
+args.forEach(arr => {
+    combinedObject.users.push(...arr);
   });
 
-  combinedObject.merge_date = Date.today().toString("M/d/yyyy");
+  //adding the date format
+combinedObject.merge_date = new Date().toString('M/d/yyyy');
 
   return combinedObject;
 }
 
-module.exports = combineUsers;
+
+
+module.exports = {
+  ...(typeof combineUsers !== 'undefined' && { combineUsers })
+};
